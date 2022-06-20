@@ -1,0 +1,10 @@
+// sm <=540px
+$breakpoint: (
+    "sm": "(max-width: 33.75em)",
+);
+
+@mixin bp($size) {
+    @media #{map-get($breakpoint, $size)} {
+        @content;
+    }
+}

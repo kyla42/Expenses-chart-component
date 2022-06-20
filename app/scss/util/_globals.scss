@@ -1,0 +1,94 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    @include bp(sm) {
+        font-size: 1.5rem;
+    }
+}
+
+.main {
+    max-width: 100vw;
+    min-height: 100vh;
+    background: $Cream;
+    display: flex;
+}
+
+.container {
+    max-width: 144rem;
+    min-height: 102.4rem;
+    margin: auto;
+    display: flex;
+
+    @include bp(sm) {
+        min-height: auto;
+    }
+}
+
+.main-frame {
+    width: 54rem;
+    height: 66rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include bp(sm) {
+        width: 35.5rem;
+        height: auto;
+        row-gap: 1.8rem;
+    }
+}
+
+.font-m {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: $VeryPaleOrange;
+
+    @include bp(sm) {
+        font-size: 2.6rem;
+    }
+}
+
+.font-l {
+    font-size: 4.8rem;
+    color: $DarkBrown;
+
+    @include bp(sm) {
+        font-size: 3.2rem;
+    }
+}
+
+.p-mbrown {
+    color: $MediumBrown;
+}
+
+.v-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding: 0;
+}

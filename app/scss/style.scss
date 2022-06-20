@@ -1,0 +1,137 @@
+@use "util" as u;
+
+.balance {
+    height: 12.5rem;
+    padding: 2.6rem 3.2rem;
+    background: u.$SoftRed;
+    color: u.$VeryPaleOrange;
+    border-radius: 2rem;
+    @extend %fx-jc-sb;
+
+    @include u.bp(sm) {
+        height: 10rem;
+        padding: 1.8rem;
+        border-radius: 1rem;
+    }
+
+    .my-balance {
+        color: u.$Cream;
+        @extend %fxcol-jc-sb;
+    }
+
+    img {
+        width: 7.2rem;
+        margin-right: 0.8rem;
+    }
+}
+
+.spending {
+    height: 51.2rem;
+    padding: 3rem 4rem;
+    background: u.$VeryPaleOrange;
+    border-radius: 2rem;
+
+    @include u.bp(sm) {
+        height: auto;
+        padding: 1.8rem;
+        border-radius: 1rem;
+    }
+
+    .title {
+        color: u.$DarkBrown;
+    }
+}
+
+.graph-area {
+    height: 24.5rem; 
+    @extend %fx-jc-sb;
+
+    .days {
+        width: 5rem;
+        @extend %fxcol-jc-e, %fxcol-ai-c;
+        row-gap: 1rem;
+
+        @include u.bp(sm) {
+            width: 3.6rem;
+        }
+
+        .number {
+            min-width: 7.5rem;
+            height: 4rem;
+            background: u.$DarkBrown;
+            color: u.$VeryPaleOrange;
+            border-radius: 0.5rem;
+            @extend %fx-jcai-c;
+            display: none;
+            transform: scale(0);
+            animation: pop .3s forwards;
+
+            @include u.bp(sm) {
+                min-width: 4.2rem;
+                height: 3rem;
+                font-size: 1rem;
+            }
+
+            &.active {
+                display: flex;
+
+                @keyframes pop {
+                    100% {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .graph {
+            width: 100%;
+            height: 0;
+            background: u.$SoftRed;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+
+            &:hover {
+                opacity: 0.5;                  
+            }              
+        }
+            
+        .day {
+            color: u.$MediumBrown;
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+        }
+    }      
+}
+
+
+.line {
+    height: 3.5rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.2rem solid u.$Cream;
+
+    @include u.bp(sm) {
+        height: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.total-balance {
+    height: 7.5rem;
+    @extend %fx-jc-sb;
+
+    @include u.bp(sm) {
+        height: 6rem;
+    }
+
+    .comparison {
+        @extend %fxcol-jc-e;
+
+        .percentage {
+            color: u.$DarkBrown;
+            font-weight: 700;
+            @extend %fx-jc-e;      
+        }
+    }
+}

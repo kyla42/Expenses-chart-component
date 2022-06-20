@@ -1,0 +1,107 @@
+// @use "util" as u;
+
+// .balance {
+//     height: 12.5rem;
+//     padding: 2.6rem 3.2rem;
+//     background: u.$SoftRed;
+//     color: u.$VeryPaleOrange;
+//     border-radius: 2rem;
+//     @extend %fx-jc-sb;
+
+//     .my-balance {
+//         color: u.$Cream;
+//         @extend %fxcol-jc-sb;
+//     }
+
+//     img {
+//         width: 7.2rem;
+//         margin-right: 0.8rem;
+//     }
+// }
+
+// .spending {
+//     height: 51.2rem;
+//     padding: 3rem 4rem;
+//     background: u.$VeryPaleOrange;
+//     border-radius: 2rem;
+
+//     .title {
+//         color: u.$DarkBrown;
+//     }
+// }
+
+// .graph-area {
+//     height: 24.5rem; 
+//     @extend %fx-jc-sb;
+
+//     .days {
+//         width: 5rem;
+//         @extend %fxcol-jc-e, %fxcol-ai-c;
+//         row-gap: 1rem;
+
+//         @for $i from 1 through 7 {
+//             .number:nth-child(#{$i}) {
+//                 min-width: 7.5rem;
+//                 height: 4rem;
+//                 background: u.$DarkBrown;
+//                 color: u.$VeryPaleOrange;
+//                 border-radius: 0.5rem;
+//                 @extend %fx-jcai-c;
+//                 display: none;
+//                 transform: scale(0);
+//                 animation: number .3s forwards;
+
+//                 &.active {
+//                     display: flex;
+
+//                     @keyframes number {
+//                         100% {
+//                             transform: scale(1);
+//                         }
+//                     }                 
+//                 }
+//             }
+
+//             .graph:nth-child(#{$i}) {
+//                 width: 100%;
+//                 height: 0;
+//                 background: u.$SoftRed;
+//                 border-radius: 0.5rem;
+//                 cursor: pointer;
+//                 transition: all .35s ease-in-out;
+
+//                 &:hover {
+//                     opacity: 0.5;                  
+//                 }              
+//             }
+               
+//             .day:nth-child(#{$i}) {
+//                 color: u.$MediumBrown;
+//                 font-size: 1.5rem;
+//                 font-weight: 400;
+//                 text-align: center;
+//             }
+//         }      
+//     }
+// }
+
+// .line {
+//     height: 3.5rem;
+//     margin-bottom: 3.5rem;
+//     border-bottom: 0.2rem solid u.$Cream;
+// }
+
+// .total-balance {
+//     height: 7.5rem;
+//     @extend %fx-jc-sb;
+
+//     .comparison {
+//         @extend %fxcol-jc-e;
+
+//         .percentage {
+//             color: u.$DarkBrown;
+//             font-weight: 700;
+//             @extend %fx-jc-e;      
+//         }
+//     }
+// }
